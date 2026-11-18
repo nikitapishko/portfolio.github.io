@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+const cvDownloadUrl = `${import.meta.env.BASE_URL}downloads/Mykyta_Pishko_Frontend_Developer.pdf`;
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -98,7 +100,7 @@ function Index() {
           </p>
           <div className="mt-8 grid gap-3 font-mono text-sm sm:mt-10 sm:flex sm:flex-wrap sm:gap-4">
             <a href="mailto:nikitapishko@gmail.com" className="rounded-md bg-primary px-6 py-3 text-center font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">Get in touch →</a>
-            <a href="/downloads/Mykyta_Pishko_Frontend_Developer.pdf" download="Mykyta_Pishko_Frontend_Developer.pdf" className="rounded-md border border-border px-6 py-3 text-center transition-colors hover:border-primary hover:text-primary">Download CV (PDF) ↓</a>
+            <a href={cvDownloadUrl} download="Mykyta_Pishko_Frontend_Developer.pdf" className="rounded-md border border-border px-6 py-3 text-center transition-colors hover:border-primary hover:text-primary">Download CV (PDF) ↓</a>
             <a href="https://github.com/nikitapishko" target="_blank" rel="noreferrer" className="rounded-md border border-border px-6 py-3 text-center transition-colors hover:border-primary hover:text-primary">GitHub</a>
           </div>
           <dl className="mt-14 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:mt-20 sm:gap-6">
@@ -163,7 +165,7 @@ function Index() {
 
         <Section id="contact" n="05" title="Let's work together">
           <div className="divide-y divide-border border-y border-border">
-            <a href="/downloads/Mykyta_Pishko_Frontend_Developer.pdf" download="Mykyta_Pishko_Frontend_Developer.pdf" className="grid grid-cols-[minmax(0,auto)_minmax(0,1fr)] items-center gap-4 py-4 transition-colors sm:py-5 hover:text-primary">
+            <a href={cvDownloadUrl} download="Mykyta_Pishko_Frontend_Developer.pdf" className="grid grid-cols-[minmax(0,auto)_minmax(0,1fr)] items-center gap-4 py-4 transition-colors sm:py-5 hover:text-primary">
               <span className="shrink-0 font-mono text-xs text-muted-foreground sm:text-sm">Resume</span>
               <span className="min-w-0 truncate text-right text-base sm:text-lg md:text-2xl">Download CV (PDF) ↓</span>
             </a>
